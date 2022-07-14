@@ -5,18 +5,66 @@
   height: 490px;
 }
 
+.eggyroll {
+  width: 52px;
+  height: 55px;
+  /* background: url("./resources/images/rolly.gif"); */
+  background: url("./resources/images/dino_run.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: solid pink;
+  border-radius: 100%;
+  position: absolute;
+  top: 300px;
+}
+
+.dinoBad {
+  width: 190px;
+  height: 106px;
+  /* background: url(./resources/images/rolly.gif); */
+  background: url(./resources/images/dino_run.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* border: solid pink; */
+  border-radius: 100%;
+  position: absolute;
+  top: 300px;
+}
+
+#bad:hover {
+  cursor: url("./resources/images/swatter.png"), auto;
+}
+
+#bad:active {
+  cursor: url("./resources/images/slap.png"), auto;
+}
+
+/*---------PACING AMNIMATION--------------------------------*/
+
 .anim {
   animation-duration: 10s;
   animation-name: slidein;
   animation-iteration-count: infinite;
-  /* animation-direction: alternate; */
   animation-timing-function: linear;
 }
 
-@keyframes slidein {
+.anim2 {
+  animation-duration: 10s;
+  animation-name: dinoRun;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.anim3DinoSmack {
+  animation-duration: 1200ms;
+  animation-name: dinoSmack;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* @keyframes slidein {
   0% {
     left: 20px;
-    /*     width: 300%; */
     transform: scaleX(1);
   }
 
@@ -38,16 +86,53 @@
     left: 20px;
     transform: scaleX(1);
   }
+} */
+
+@keyframes dinoRun {
+  0% {
+    left: -14px;
+    transform: scaleX(1);
+  }
+
+  50% {
+    left: 312px;
+    transform: scaleX(1);
+  }
+  51% {
+    left: 312px;
+    transform: scaleX(-1);
+  }
+  99% {
+    left: -14px;
+    transform: scaleX(-1);
+  }
+  100% {
+    left: -14px;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes dinoSmack {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    left: -100px;
+    top: -100px;
+    width: 917px;
+    height: 578px;
+    transform: rotate(1000deg);
+  }
 }
 
 /*----------------ROLLING ANIMATION------------------*/
-/*
-.anim {
+
+/* .anim {
   animation-duration: 5s;
   animation-name: slidein;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  
 }
 
 @keyframes slidein {
@@ -56,14 +141,11 @@
     transform: rotateZ(0deg);
   }
 
-
   100% {
     left: 400px;
     transform: rotateZ(1000deg);
   }
-}
-
-*/
+} */
 
 #chao {
   background-image: url("./resources/images/egg-idle.gif");
